@@ -15,4 +15,14 @@ const notes = [
     }
 ]
 
+const labDayNote = {
+    id: 3,
+    subject: "Lab Day",
+    date: "May 27th",
+    feeling: "Jammin",
+    timeSpent: 300
+}
+
+notes.push(labDayNote);
+
 console.log(notes);
