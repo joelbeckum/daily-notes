@@ -25,4 +25,11 @@ const labDayNote = {
 
 notes.push(labDayNote);
 
-console.log(notes);
+for (let note of notes) {
+    console.log(`
+    Note ${note.id}
+    ${note.date}
+    I learned ${note.subject}.
+    I spent ${note.timeSpent} minutes working on it.
+    I felt ${note.feeling}.`);
+}
