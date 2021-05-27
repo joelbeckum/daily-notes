@@ -25,11 +25,19 @@ const labDayNote = {
 
 notes.push(labDayNote);
 
-for (let note of notes) {
-    console.log(`
-    Note ${note.id}
-    ${note.date}
-    I learned ${note.subject}.
-    I spent ${note.timeSpent} minutes working on it.
-    I felt ${note.feeling}.`);
+// for (let note of notes) {
+//     console.log(`
+//     Note ${note.id}
+//     ${note.date}
+//     I learned ${note.subject}.
+//     I spent ${note.timeSpent} minutes working on it.
+//     I felt ${note.feeling}.`);
+// }
+
+const searchTerm = "Jammin";
+
+for (const note of notes) {
+    if (note.feeling === searchTerm) {
+        console.log(note);
+    }
 }
