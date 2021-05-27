@@ -34,10 +34,35 @@ notes.push(labDayNote);
 //     I felt ${note.feeling}.`);
 // }
 
-const searchTerm = "Jammin";
+// const searchTerm = "Jammin";
 
-for (const note of notes) {
-    if (note.feeling === searchTerm) {
-        console.log(note);
-    }
+// for (const note of notes) {
+//     if (note.feeling === searchTerm) {
+//         console.log(note);
+//     }
+// }
+
+const coupNote = {
+    subject: "Took over the class",
+    feeling: "like a conqueror",
+    timeSpent: 60
 }
+
+const createNote = (newNote) => {
+    const lastIndex = notes.length - 1;
+    const lastNote = notes[lastIndex];
+    const lastId = lastNote.id;
+    const newId = lastId + 1;
+    
+    const today = new Date(Date.now());
+    const todaysDate = today.toDateString();
+
+    newNote.id = newId;
+    newNote.date = todaysDate;
+    
+    notes.push(newNote);
+}
+
+createNote(coupNote);
+
+console.log(notes);
